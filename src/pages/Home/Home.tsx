@@ -1,17 +1,17 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Zap, Shield, Smartphone, CheckCircle, Sparkles } from 'lucide-react'
+import {
+  ArrowRight, ArrowDown,
+  CheckCircle, Sparkles, Cpu, Shield, List, Clock, Languages,
+} from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { useTranslation } from '@/context/language-context'
-import { PROVIDER_NAMES } from '@/constants/constants'
 
-const features = [
-  { icon: Zap, titleKey: 'home.feature.detect', descKey: 'home.feature.detectDesc' },
-  { icon: Smartphone, titleKey: 'home.feature.format', descKey: 'home.feature.formatDesc' },
-  { icon: Shield, titleKey: 'home.feature.privacy', descKey: 'home.feature.privacyDesc' },
-]
-
-const providers = ['BPDB', 'BREB', 'DESCO', 'DPDC', 'NESCO', 'WZPDCL'] as const
+const trustItems = [
+  { icon: Cpu, key: 'home.trust1' },
+  { icon: Shield, key: 'home.trust2' },
+  { icon: CheckCircle, key: 'home.trust3' },
+] as const
 
 export default function HomePage() {
   const { t } = useTranslation()
@@ -33,7 +33,7 @@ export default function HomePage() {
             {t('home.subtitle')}
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4">
+          <div>
             <Link to="/formatter">
               <Button
                 size="lg"
@@ -47,83 +47,103 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-t py-16 md:py-20">
-        <div className="mx-auto max-w-5xl">
-          <div className="grid gap-4 md:grid-cols-3">
-            {features.map(({ icon: Icon, titleKey, descKey }) => (
-              <Card key={titleKey} className="border bg-card p-6 shadow-none transition-shadow duration-200 hover:shadow-sm">
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-primary-surface">
-                  <Icon className="h-5 w-5 text-primary" />
-                </div>
-                <h3 className="mb-1.5 font-heading text-sm font-semibold">{t(titleKey)}</h3>
-                <p className="text-sm leading-relaxed text-muted-foreground">{t(descKey)}</p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+      <section className="border-t py-16 md:py-24">
+        <div className="mx-auto max-w-4xl">
+          <h2 className="mb-10 text-center font-heading text-2xl font-bold">
+            {t('home.demoTitle')}
+          </h2>
 
-      <section className="border-t py-16 md:py-20">
-        <div className="mx-auto max-w-5xl">
-          <div className="mb-10 text-center">
-            <h2 className="mb-2 font-heading text-2xl font-bold">{t('home.howItWorks')}</h2>
-            <p className="text-muted-foreground">{t('home.subtitle')}</p>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2">
-            <Card className="border p-6 shadow-none">
+          <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+            <Card className="w-full md:flex-1 border p-5 shadow-none">
               <div className="mb-3 inline-flex items-center gap-2 rounded-lg bg-muted px-3 py-1 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-primary text-[11px] font-bold text-primary-foreground">1</span>
-                {t('home.before')}
+                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-muted-foreground/20 text-[11px] font-bold">
+                  1
+                </span>
+                {t('home.demoInput')}
               </div>
-              <p className="break-all font-mono text-sm text-foreground">
-                {t('home.beforeExample')}
+              <p className="break-all font-mono text-sm text-muted-foreground leading-relaxed">
+                BPDB: Meter 1234567890 Tk 500.00 Token: 3217407773201949846325910358843419948233
               </p>
             </Card>
 
-            <Card className="border border-primary-border bg-primary-surface p-6 shadow-none">
+            <div className="hidden md:block shrink-0">
+              <ArrowRight className="h-6 w-6 text-primary" />
+            </div>
+            <div className="block md:hidden">
+              <ArrowDown className="h-6 w-6 text-primary" />
+            </div>
+
+            <Card className="w-full md:flex-1 border border-primary-border bg-primary-surface p-5 shadow-sm">
               <div className="mb-3 inline-flex items-center gap-2 rounded-lg bg-primary px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary-foreground">
-                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white/20 text-[11px] font-bold">2</span>
+                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white/20 text-[11px] font-bold">
+                  2
+                </span>
                 {t('home.after')}
               </div>
-              {t('home.afterExample')
-                .split('\n')
-                .map((line, i) => (
-                  <p key={i} className="font-mono text-sm text-foreground tracking-widest">
-                    {line}
-                  </p>
-                ))}
+              <p className="font-mono text-sm tracking-widest text-foreground">
+                3217 4077 7320 1949 8463
+              </p>
+              <p className="mt-1 font-mono text-sm tracking-widest text-foreground">
+                2591 0358 8434 1994 8233
+              </p>
+              <div className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+                <CheckCircle className="h-3 w-3" />
+                {t('home.demoReady')}
+              </div>
             </Card>
           </div>
         </div>
       </section>
 
       <section className="border-t py-16 md:py-20">
-        <div className="mx-auto max-w-5xl text-center">
-          <h2 className="mb-8 font-heading text-2xl font-bold">{t('home.providers')}</h2>
-          <div className="flex flex-wrap justify-center gap-3">
-            {providers.map((p) => (
-              <span
-                key={p}
-                className="inline-flex items-center gap-2 rounded-xl border bg-card px-4 py-2 text-sm font-medium text-foreground shadow-sm transition-shadow duration-200 hover:shadow-md"
-              >
-                <CheckCircle className="h-4 w-4 text-primary" />
-                {p === 'BREB' ? PROVIDER_NAMES[p] : p}
-              </span>
+        <div className="mx-auto max-w-3xl">
+          <h2 className="mb-8 text-center font-heading text-lg font-semibold text-muted-foreground">
+            {t('home.trustTitle')}
+          </h2>
+          <div className="grid gap-6 md:grid-cols-3">
+            {trustItems.map(({ icon: Icon, key }) => (
+              <div key={key} className="text-center">
+                <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-primary-surface">
+                  <Icon className="h-5 w-5 text-primary" />
+                </div>
+                <h3 className="text-sm font-semibold">
+                  {t(key)}
+                </h3>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="border-t py-16 md:py-20">
-        <div className="mx-auto max-w-2xl text-center">
-          <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-primary-surface">
-            <Shield className="h-6 w-6 text-primary" />
+      <section className="border-t py-12 md:py-16">
+        <div className="mx-auto max-w-3xl">
+          <h2 className="mb-8 text-center font-heading text-lg font-semibold text-muted-foreground">
+            {t('home.moreFeatures')}
+          </h2>
+          <div className="grid gap-3 md:grid-cols-3">
+            {[
+              { icon: List, titleKey: 'home.meterCodes', descKey: 'home.meterCodesDesc' },
+              { icon: Clock, titleKey: 'home.tokenHistory', descKey: 'home.tokenHistoryDesc' },
+              { icon: Languages, titleKey: 'home.languageSupport', descKey: 'home.languageSupportDesc' },
+            ].map(({ icon: Icon, titleKey, descKey }) => (
+              <div
+                key={titleKey}
+                className="flex flex-col items-center gap-2 rounded-xl border border-border/50 bg-card p-4 text-center"
+              >
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary-surface">
+                  <Icon className="h-4 w-4 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-xs font-semibold text-foreground">
+                    {t(titleKey)}
+                  </h3>
+                  <p className="mt-0.5 text-xs leading-relaxed text-muted-foreground">
+                    {t(descKey)}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
-          <h3 className="mb-2 font-heading text-lg font-semibold">{t('home.privacyTitle')}</h3>
-          <p className="mx-auto max-w-md text-sm leading-relaxed text-muted-foreground">
-            {t('home.privacyText')}
-          </p>
         </div>
       </section>
     </div>

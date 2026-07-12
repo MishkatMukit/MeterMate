@@ -15,7 +15,7 @@ export const translations: Translations = {
     'nav.about': 'About',
 
     'home.title': 'Prepaid Meter Tokens, Made Simple',
-    'home.subtitle': 'Paste your prepaid electricity SMS and get clean, formatted tokens ready for your meter.',
+    'home.subtitle': 'Paste your prepaid meter SMS → MeterMate automatically extracts and formats the tokens.',
     'home.badge': '6 providers \u00b7 fully offline',
     'home.getStarted': 'Start Formatting',
     'home.feature.detect': 'Auto-Detect Provider',
@@ -35,6 +35,31 @@ export const translations: Translations = {
 
     'home.privacyTitle': 'Your Privacy Matters',
     'home.privacyText': 'All processing happens entirely in your browser. No SMS content, token digits, or meter information is ever transmitted, stored, or logged.',
+
+    'home.demoTitle': 'See It in Action',
+    'home.demoInput': 'Input SMS',
+    'home.demoReady': 'Ready to Copy',
+    'home.step1Title': 'Paste SMS',
+    'home.step1Desc': 'Copy your recharge SMS here',
+    'home.step2Title': 'Auto Format',
+    'home.step2Desc': 'Provider & tokens detected instantly',
+    'home.step3Title': 'Copy & Recharge',
+    'home.step3Desc': 'Use tokens in your meter',
+    'home.providersTitle': 'Auto-Detects Your Provider',
+    'home.trust1': '100% Local Processing',
+    'home.trust2': 'No Data Uploaded',
+    'home.trust3': 'No Account Required',
+    'home.trustTitle': 'Why Trust MeterMate',
+
+    'home.moreFeatures': 'More Features',
+    'home.meterCodes': 'Meter Codes',
+    'home.meterCodesDesc': 'Browse verified keypad codes for supported meter brands and models.',
+    'home.tokenHistory': 'Token History',
+    'home.tokenHistoryDesc': 'View previously formatted tokens and quickly access past recharges.',
+    'home.languageSupport': 'Language Support',
+    'home.languageSupportDesc': 'Available in Bangla and English.',
+    'home.localProcessing': 'Local Processing',
+    'home.localProcessingDesc': 'All SMS parsing and formatting happens entirely in your browser. No data is uploaded or stored.',
 
     'formatter.title': 'Token Formatter',
     'formatter.subtitle': 'Paste your prepaid meter SMS to extract and format tokens.',
@@ -143,7 +168,7 @@ export const translations: Translations = {
 
     'home.title': 'প্রিপেইড মিটারের টোকেন, এখন আরও সহজ',
     'home.subtitle':
-      'আপনার প্রিপেইড মিটারের এসএমএস পেস্ট করুন। টোকেনগুলো স্বয়ংক্রিয়ভাবে বের করে সুন্দরভাবে সাজিয়ে দেওয়া হবে।',
+      'আপনার এসএমএস পেস্ট করুন → MeterMate স্বয়ংক্রিয়ভাবে টোকেন বের করে ফরম্যাট করে।',
     'home.badge': '৬টি প্রোভাইডার \u00b7 সম্পূর্ণ অফলাইন',
     'home.getStarted': 'ফরম্যাটিং শুরু করুন',
     'home.feature.detect': 'স্বয়ংক্রিয়ভাবে প্রোভাইডার শনাক্ত',
@@ -165,6 +190,31 @@ export const translations: Translations = {
 
     'home.privacyTitle': 'গোপনীয়তা',
     'home.privacyText': 'সকল প্রক্রিয়াকরণ আপনার ব্রাউজারেই হয়। কোনো এসএমএস, টোকেন বা মিটারের তথ্য কখনও পাঠানো, সংরক্ষণ বা লগ করা হয় না।',
+
+    'home.demoTitle': 'লাইভ উদাহরণ',
+    'home.demoInput': 'ইনপুট এসএমএস',
+    'home.demoReady': 'কপি করার জন্য প্রস্তুত',
+    'home.step1Title': 'এসএমএস পেস্ট',
+    'home.step1Desc': 'আপনার রিচার্জ এসএমএস পেস্ট করুন',
+    'home.step2Title': 'অটো ফরম্যাট',
+    'home.step2Desc': 'প্রোভাইডার ও টোকেন সাথে সাথে শনাক্ত',
+    'home.step3Title': 'কপি ও রিচার্জ',
+    'home.step3Desc': 'মিটারে ব্যবহার করুন',
+    'home.providersTitle': 'স্বয়ংক্রিয় প্রোভাইডার শনাক্ত',
+    'home.trust1': '১০০% লোকাল প্রক্রিয়াকরণ',
+    'home.trust2': 'কোনো তথ্য আপলোড হয় না',
+    'home.trust3': 'কোনো অ্যাকাউন্ট প্রয়োজন নেই',
+    'home.trustTitle': 'কেন MeterMate বিশ্বস্ত',
+
+    'home.moreFeatures': 'আরও ফিচার',
+    'home.meterCodes': 'মিটার কোড',
+    'home.meterCodesDesc': 'সমর্থিত মিটার ব্র্যান্ড ও মডেলের জন্য ভেরিফাইড কীপ্যাড কোড।',
+    'home.tokenHistory': 'টোকেন ইতিহাস',
+    'home.tokenHistoryDesc': 'পূর্ববর্তী ফরম্যাট করা টোকেন দেখুন এবং পুরনো রিচার্জে দ্রুত অ্যাক্সেস পান।',
+    'home.languageSupport': 'ভাষা সমর্থন',
+    'home.languageSupportDesc': 'বাংলা এবং ইংরেজিতে উপলব্ধ।',
+    'home.localProcessing': 'লোকাল প্রক্রিয়াকরণ',
+    'home.localProcessingDesc': 'সব এসএমএস পার্সিং ও ফরম্যাটিং আপনার ব্রাউজারেই হয়। কোনো তথ্য আপলোড বা সংরক্ষণ করা হয় না।',
 
     'formatter.title': 'টোকেন ফরম্যাটার',
     'formatter.subtitle':
