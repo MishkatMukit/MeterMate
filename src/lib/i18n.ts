@@ -300,7 +300,7 @@ export const translations: Translations = {
     'favorites.comingSoon': 'শীঘ্রই আসছে',
     'favorites.empty': 'ভবিষ্যতের আপডেটে এখানে আপনার সংরক্ষিত মিটারগুলো দেখা যাবে।',
 
-    'footer.privacy': 'সহজ • দ্রুত • নিরাপদ',
+    'footer.privacy': 'MeterMate - সহজ • দ্রুত • নিরাপদ',
     'footer.tagline': 'প্রিপেইড মিটারের টোকেন ফরম্যাটার',
     'footer.version': 'v1.0.0',
 
