@@ -33,7 +33,7 @@ export function SmsInput({ value, onChange, onParse, onReset, hasResult, parsed 
             type="button"
             onClick={() => setShowOriginal(!showOriginal)}
             whileHover={{ x: 2 }}
-            className="flex min-h-[44px] sm:min-h-0 items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            className="flex min-h-11 sm:min-h-0 items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
             {showOriginal ? (
               <ChevronDown className="h-4 w-4" />
@@ -43,7 +43,7 @@ export function SmsInput({ value, onChange, onParse, onReset, hasResult, parsed 
             Show Original SMS
           </motion.button>
           <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.97 }}>
-            <Button variant="outline" size="sm" onClick={onReset} className="min-h-[44px] sm:min-h-0 gap-1.5">
+            <Button variant="outline" size="sm" onClick={onReset} className="min-h-11 sm:min-h-0 gap-1.5">
               <RotateCcw className="h-4 w-4" />
               Parse Another
             </Button>

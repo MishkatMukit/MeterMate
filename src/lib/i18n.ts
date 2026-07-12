@@ -29,7 +29,7 @@ export const translations: Translations = {
     'home.before': 'Before',
     'home.after': 'After',
     'home.beforeExample': '3217407773201949846325910358843419948233',
-    'home.afterExample': '3217 4077 7320 1949 8463\n2591 0358 8434 1994 8233',
+    'home.afterExample': '3217-4077-7320-1949-8463\n2591-0358-8434-1994-8233',
 
     'home.providers': 'Supported Providers',
 
@@ -185,7 +185,7 @@ export const translations: Translations = {
     'home.before': 'আগে',
     'home.after': 'পরে',
     'home.beforeExample': '3217407773201949846325910358843419948233',
-    'home.afterExample': '3217 4077 7320 1949 8463\n2591 0358 8434 1994 8233',
+    'home.afterExample': '3217-4077-7320-1949-8463\n2591-0358-8434-1994-8233',
 
     'home.providers': 'সমর্থিত প্রোভাইডার',
 

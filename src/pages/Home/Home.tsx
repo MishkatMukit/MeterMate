@@ -81,10 +81,10 @@ export default function HomePage() {
                 {t('home.after')}
               </div>
               <p className="font-mono text-sm tracking-widest text-foreground">
-                3217 4077 7320 1949 8463
+                3217-4077-7320-1949-8463
               </p>
               <p className="mt-1 font-mono text-sm tracking-widest text-foreground">
-                2591 0358 8434 1994 8233
+                2591-0358-8434-1994-8233
               </p>
               <div className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
                 <CheckCircle className="h-3 w-3" />
