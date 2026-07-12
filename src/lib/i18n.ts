@@ -143,8 +143,8 @@ export const translations: Translations = {
     'favorites.comingSoon': 'Coming soon.',
     'favorites.empty': 'Your saved meters will appear here in a future update.',
 
-    'footer.privacy': 'MeterMate \u2014 All processing happens locally in your browser. No data is sent anywhere.',
-    'footer.tagline': 'Bangladesh Prepaid Meter Token Formatter',
+    'footer.privacy': 'MeterMate \u2014 - Prepaid meter hassle at ease.',
+    'footer.tagline': 'Prepaid Meter Token Formatter',
     'footer.version': 'v1.0.0',
 
     'meterCodes.title': 'Meter Codes',
@@ -300,8 +300,8 @@ export const translations: Translations = {
     'favorites.comingSoon': 'শীঘ্রই আসছে',
     'favorites.empty': 'ভবিষ্যতের আপডেটে এখানে আপনার সংরক্ষিত মিটারগুলো দেখা যাবে।',
 
-    'footer.privacy': 'সব তথ্য আপনার ব্রাউজারেই প্রক্রিয়াকরণ হয়। কোনো তথ্য কোথাও পাঠানো হয় না।',
-    'footer.tagline': 'বাংলাদেশের প্রিপেইড মিটারের টোকেন ফরম্যাটার',
+    'footer.privacy': 'সহজ • দ্রুত • নিরাপদ',
+    'footer.tagline': 'প্রিপেইড মিটারের টোকেন ফরম্যাটার',
     'footer.version': 'v1.0.0',
 
     'meterCodes.title': 'মিটার কোড',
