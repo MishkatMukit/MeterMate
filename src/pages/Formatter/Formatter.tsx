@@ -3,7 +3,6 @@ import { SmsInput } from '@/components/token/sms-input'
 import { TokenDisplay } from '@/components/token/token-display'
 import { TokenList } from '@/components/token/token-list'
 import { TokenNavigation } from '@/components/token/token-navigation'
-import { TokenCopy } from '@/components/token/token-copy'
 import { ProviderBadge } from '@/components/token/provider-badge'
 import { MeterInfoPanel } from '@/components/token/meter-info'
 import { ParseError } from '@/components/token/parse-error'
@@ -12,8 +11,10 @@ import { Button } from '@/components/ui/button'
 import { useTokenContext } from '@/context/token-context'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { useTranslation } from '@/context/language-context'
-import { CheckCircle, RotateCcw, ArrowLeft } from 'lucide-react'
+import { CheckCircle, RotateCcw, ArrowLeft, Copy, Check } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { toast } from 'sonner'
+import { useSettings } from '@/context/settings-context'
 
 export default function FormatterPage() {
   const { t } = useTranslation()
@@ -145,27 +146,41 @@ export default function FormatterPage() {
 
       {validation && !validation.isValid && <ParseError validation={validation} />}
 
-      {parseResult && !isComplete && currentToken && (
-        <>
-          <div className="order-4 md:order-2">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 md:gap-0">
-              <div className="flex items-center gap-3">
-                <ProviderBadge provider={parseResult.provider} />
-                <span className="flex items-center gap-1.5 text-xs text-muted-foreground">
-                  <CheckCircle className="h-3.5 w-3.5 text-primary" />
-                  {parseResult.tokens.length} tokens
-                  {' \u2014 '}
-                  {t('provider.parsedSuccess')}
-                </span>
-              </div>
-              <TokenCopy
-                currentToken={currentToken}
-                allTokens={parseResult.tokens}
-                onCopy={handleNext}
+      {parseResult && (
+        <div className="order-4 md:order-2">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            <div className="flex items-center gap-3">
+              <ProviderBadge provider={parseResult.provider} />
+              <span className={`flex items-center gap-1.5 text-xs ${isComplete ? 'text-primary font-medium' : 'text-muted-foreground'}`}>
+                <CheckCircle className={`h-3.5 w-3.5 ${isComplete ? 'text-primary' : 'text-primary'}`} />
+                <span>{parseResult.tokens.length} token{parseResult.tokens.length !== 1 ? 's' : ''}</span>
+                {isComplete && (
+                  <>
+                    <span className="text-muted-foreground font-normal">·</span>
+                    <span className="text-primary font-medium">{t('token.allDone')}</span>
+                  </>
+                )}
+              </span>
+            </div>
+            <div className="flex items-center gap-2">
+              {!isComplete && (
+                <ToolbarCopyButton
+                  label={t('token.copy')}
+                  value={currentToken!}
+                  onCopy={handleNext}
+                />
+              )}
+              <ToolbarCopyButton
+                label={t('token.copyAll', String(parseResult.tokens.length))}
+                value={parseResult.tokens.join('\n')}
               />
             </div>
           </div>
+        </div>
+      )}
 
+      {parseResult && !isComplete && currentToken && (
+        <>
           <div className="order-2 md:order-3">
             <TokenDisplay formatted={currentFormatted!} />
           </div>
@@ -260,5 +275,43 @@ export default function FormatterPage() {
         onCancel={cancelSkip}
       />
     </div>
+  )
+}
+
+interface ToolbarCopyButtonProps {
+  label: string
+  value: string
+  onCopy?: () => void
+}
+
+function ToolbarCopyButton({ label, value, onCopy }: ToolbarCopyButtonProps) {
+  const [copied, setCopied] = useState(false)
+  const { t: tt } = useTranslation()
+  const { autoNext } = useSettings()
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(value)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+      toast.success(tt('token.copied', label))
+      if (onCopy && autoNext) {
+        onCopy()
+      }
+    } catch {
+      toast.error(tt('token.copyFailed'))
+    }
+  }
+
+  return (
+    <Button
+      variant="outline"
+      size="sm"
+      onClick={handleCopy}
+      className="gap-1.5"
+    >
+      {copied ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />}
+      {label}
+    </Button>
   )
 }

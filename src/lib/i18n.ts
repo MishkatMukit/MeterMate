@@ -89,6 +89,7 @@ export const translations: Translations = {
     'token.completed.title': 'All tokens completed!',
     'token.completed.count': (count: string) => `You have successfully processed all ${count} tokens.`,
     'token.completed.parseAnother': 'Parse Another SMS',
+    'token.allDone': 'All done!',
 
     'provider.unknown': 'Unknown Provider',
     'provider.parsedSuccess': 'Parsed successfully',
@@ -224,7 +225,7 @@ export const translations: Translations = {
     'formatter.parse': 'টোকেন বের করুন',
 
     'token.copy': 'টোকেন কপি করুন',
-    'token.copyAll': (count: string) => `সব টোকেন কপি করুন (${count})`,
+    'token.copyAll': (count: string) => `সব কপি করুন (${count})`,
     'token.copied': (label: string) => `${label} কপি করা হয়েছে`,
     'token.copyFailed': 'কপি করা যায়নি। অনুগ্রহ করে ব্রাউজারের অনুমতি পরীক্ষা করুন।',
     'token.navLabel': 'টোকেন নেভিগেশন',
@@ -245,6 +246,7 @@ export const translations: Translations = {
     'token.completed.title': 'সব টোকেন সম্পন্ন!',
     'token.completed.count': (count: string) => `${count} টি টোকেন সম্পন্ন`,
     'token.completed.parseAnother': 'আরেকটি এসএমএস পার্স করুন',
+    'token.allDone': 'সব সম্পন্ন!',
 
     'provider.unknown': 'অজানা প্রোভাইডার',
     'provider.parsedSuccess': 'সফলভাবে পার্স করা হয়েছে',
