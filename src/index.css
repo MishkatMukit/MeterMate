@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@100..900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-heading: 'Anek Bangla', sans-serif;
+  --font-body: 'Noto Sans Bengali', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-brand: 'Space Grotesk', sans-serif;
+  --color-background: #FAFAFA;
+  --color-foreground: #111827;
+  --color-card: #FFFFFF;
+  --color-card-foreground: #111827;
+  --color-primary: #16A34A;
+  --color-primary-foreground: #FFFFFF;
+  --color-primary-light: #DCFCE7;
+  --color-primary-surface: #F0FDF4;
+  --color-primary-border: #BBF7D0;
+  --color-secondary: #F0FDF4;
+  --color-secondary-foreground: #111827;
+  --color-muted: #F9FAFB;
+  --color-muted-foreground: #9CA3AF;
+  --color-accent: #DCFCE7;
+  --color-accent-foreground: #166534;
+  --color-destructive: #EF4444;
+  --color-destructive-foreground: #FFFFFF;
+  --color-border: #E5E7EB;
+  --color-input: #E5E7EB;
+  --color-ring: #16A34A;
+  --color-success: #22C55E;
+}
+
+@variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+
+  code, pre, kbd, samp {
+    font-family: var(--font-mono);
+  }
+}
+
+.dark {
+  --color-background: #020617;
+  --color-foreground: #F8FAFC;
+  --color-card: #1E293B;
+  --color-card-foreground: #F8FAFC;
+  --color-primary: #22C55E;
+  --color-primary-foreground: #020617;
+  --color-primary-light: #052E16;
+  --color-primary-surface: #022C22;
+  --color-primary-border: #334155;
+  --color-secondary: #0F172A;
+  --color-secondary-foreground: #F8FAFC;
+  --color-muted: #0F172A;
+  --color-muted-foreground: #CBD5E1;
+  --color-accent: #022C22;
+  --color-accent-foreground: #22C55E;
+  --color-destructive: #EF4444;
+  --color-destructive-foreground: #FFFFFF;
+  --color-border: #334155;
+  --color-input: #334155;
+  --color-ring: #22C55E;
+  --color-success: #22C55E;
+}

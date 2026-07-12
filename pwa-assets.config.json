@@ -1,0 +1,13 @@
+{
+  "input": "public/pwa-icon.svg",
+  "output": "public",
+  "icons": {
+    "android": [
+      { "src": "pwa-192x192.png", "sizes": "192x192", "purpose": "any" },
+      { "src": "pwa-512x512.png", "sizes": "512x512", "purpose": "any maskable" }
+    ],
+    "favicon": [
+      { "src": "favicon.svg", "sizes": "any" }
+    ]
+  }
+}
