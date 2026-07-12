@@ -143,7 +143,7 @@ export const translations: Translations = {
     'favorites.comingSoon': 'Coming soon.',
     'favorites.empty': 'Your saved meters will appear here in a future update.',
 
-    'footer.privacy': 'MeterMate \u2014 - Prepaid meter hassle at ease.',
+    'footer.privacy': 'MeterMate \u2014 - Easy • Fast • Reliable',
     'footer.tagline': 'Prepaid Meter Token Formatter',
     'footer.version': 'v1.0.0',
 
