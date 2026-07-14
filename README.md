@@ -304,7 +304,7 @@ SOFTWARE.
 
 **Mishkat Mahabub**
 
-- Portfolio: (https://mishkatmukit.vercel.app)
+- Portfolio: (https://mishkatmahabub.vercel.app)
 
 ---
 
