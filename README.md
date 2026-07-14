@@ -302,11 +302,9 @@ SOFTWARE.
 
 ## Author
 
-**Your Name**
+**Mishkat Mahabub**
 
-- GitHub: [@your-username](https://github.com/your-username)
-- Portfolio: [your-portfolio.dev](https://your-portfolio.dev)
-- Email: your-email@example.com
+- Portfolio: (https://mishkatmukit.vercel.app)
 
 ---
 
