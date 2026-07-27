@@ -2,6 +2,7 @@ import { useTheme } from '@/context/theme-context'
 import { useTranslation } from '@/context/language-context'
 import { useSettings } from '@/context/settings-context'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Seo } from '@/components/common/seo'
 
 const themeOptions = [
   { value: 'light' as const, key: 'settings.light' },
@@ -16,6 +17,11 @@ export default function SettingsPage() {
 
   return (
     <div className="space-y-6">
+      <Seo
+        title="Settings"
+        description="Customize your MeterMate experience. Adjust theme (light, dark, system), language (English, Bangla), and auto-next preferences."
+        canonical="/settings"
+      />
       <div>
         <h1 className="text-2xl font-bold">{t('settings.title')}</h1>
         <p className="text-sm text-muted-foreground mt-1">

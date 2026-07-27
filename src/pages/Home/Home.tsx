@@ -6,6 +6,8 @@ import {
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { useTranslation } from '@/context/language-context'
+import { Seo } from '@/components/common/seo'
+import { WebAppStructuredData } from '@/components/common/structured-data'
 
 const trustItems = [
   { icon: Cpu, key: 'home.trust1' },
@@ -18,6 +20,18 @@ export default function HomePage() {
 
   return (
     <div>
+      <Seo
+        title="Prepaid Meter Tokens, Made Simple"
+        description="Paste your prepaid meter SMS — MeterMate automatically detects your provider (BPDB, BREB, DESCO, DPDC, NESCO, WZPDCL), extracts 20-digit tokens, and formats them into readable 4-digit groups. 100% client-side, no data uploaded."
+        keywords="prepaid meter token formatter, Bangladesh electricity token, BPDB token, DESCO token, NESCO token, BREB token, DPDC token, WZPDCL token, meter recharge code"
+        canonical="/"
+      />
+      <WebAppStructuredData
+        path="/"
+        breadcrumbs={[
+          { name: 'Home', path: '/' },
+        ]}
+      />
       <section className="pb-16 pt-12 md:pb-24 md:pt-20">
         <div className="mx-auto max-w-2xl text-center">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border bg-primary-surface px-4 py-1.5 text-sm font-medium text-primary">

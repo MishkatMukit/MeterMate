@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { useTranslation } from '@/context/language-context'
 import { METER_BOOK } from '@/constants/meter-codes.constants'
+import { Seo } from '@/components/common/seo'
 
 export default function MeterCodesPage() {
   const { lang, t } = useTranslation()
@@ -56,6 +57,12 @@ export default function MeterCodesPage() {
 
   return (
     <div className="space-y-6">
+      <Seo
+        title="Meter Codes"
+        description="Browse verified USSD and service codes for prepaid electricity meters in Bangladesh. Supports Hexing, Inhemeter, Linyang, and Eastern meter brands. Search by code, purpose, or meter model."
+        keywords="meter codes, USSD codes, prepaid meter Bangladesh, Hexing meter codes, Inhemeter codes, Linyang codes, Eastern meter codes, electricity service codes"
+        canonical="/meter-codes"
+      />
       <section className="text-center space-y-2">
         <h1 className="text-2xl font-bold">{t('meterCodes.title')}</h1>
         <p className="text-sm text-muted-foreground max-w-md mx-auto">

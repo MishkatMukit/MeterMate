@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://metermate-prepaid-meter-token-formatter.vercel.app/sitemap.xml

@@ -1,12 +1,18 @@
 import { Star } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 import { useTranslation } from '@/context/language-context'
+import { Seo } from '@/components/common/seo'
 
 export default function FavoritesPage() {
   const { t } = useTranslation()
 
   return (
     <div className="space-y-6">
+      <Seo
+        title="Favorites"
+        description="View and manage your saved prepaid meters."
+        canonical="/favorites"
+      />
       <div>
         <h1 className="text-2xl font-bold">{t('favorites.title')}</h1>
         <p className="text-sm text-muted-foreground mt-1">{t('favorites.comingSoon')}</p>

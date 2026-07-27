@@ -15,6 +15,8 @@ import { CheckCircle, RotateCcw, ArrowLeft, Copy, Check } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { toast } from 'sonner'
 import { useSettings } from '@/context/settings-context'
+import { Seo } from '@/components/common/seo'
+import { WebAppStructuredData } from '@/components/common/structured-data'
 
 export default function FormatterPage() {
   const { t } = useTranslation()
@@ -119,6 +121,18 @@ export default function FormatterPage() {
 
   return (
     <div className="flex flex-col gap-8 md:gap-7">
+      <Seo
+        title="Token Formatter"
+        description="Paste your prepaid meter SMS to extract and format tokens. MeterMate automatically detects your electricity provider and splits concatenated 20-digit tokens into readable 4-digit groups. Supports BPDB, BREB, DESCO, DPDC, NESCO, and WZPDCL."
+        canonical="/formatter"
+      />
+      <WebAppStructuredData
+        path="/formatter"
+        breadcrumbs={[
+          { name: 'Home', path: '/' },
+          { name: 'Token Formatter', path: '/formatter' },
+        ]}
+      />
       <div>
         <h1 className="text-2xl font-bold">{t('formatter.title')}</h1>
         <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">

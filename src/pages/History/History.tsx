@@ -6,6 +6,7 @@ import { useTranslation } from '@/context/language-context'
 import { getHistory, clearHistory, type HistoryEntry } from '@/lib/history'
 import { toast } from 'sonner'
 import { useState } from 'react'
+import { Seo } from '@/components/common/seo'
 
 function formatDate(ts: number): string {
   const d = new Date(ts)
@@ -62,6 +63,11 @@ export default function HistoryPage() {
 
   return (
     <div className="space-y-6">
+      <Seo
+        title="History"
+        description="View your previously formatted prepaid meter tokens. Quickly access past recharges and revisit parsed token history."
+        canonical="/history"
+      />
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold">{t('history.title')}</h1>

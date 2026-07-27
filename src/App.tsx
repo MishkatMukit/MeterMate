@@ -1,3 +1,4 @@
+import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Toaster } from 'sonner'
 import { ThemeProvider } from '@/context/theme-context'
@@ -12,35 +13,39 @@ import MeterCodesPage from '@/pages/MeterCodes/MeterCodes'
 import FavoritesPage from '@/pages/Favorites/Favorites'
 import SettingsPage from '@/pages/Settings/Settings'
 import AboutPage from '@/pages/About/About'
+import { GlobalSeo } from '@/components/common/global-seo'
 
 export default function App() {
   return (
-    <ThemeProvider>
-      <LanguageProvider>
-        <SettingsProvider>
-        <TokenProvider>
-          <BrowserRouter>
-            <Routes>
-              <Route element={<AppLayout />}>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/formatter" element={<FormatterPage />} />
-                <Route path="/meter-codes" element={<MeterCodesPage />} />
-                <Route path="/history" element={<HistoryPage />} />
-                <Route path="/favorites" element={<FavoritesPage />} />
-                <Route path="/settings" element={<SettingsPage />} />
-                <Route path="/about" element={<AboutPage />} />
-              </Route>
-            </Routes>
-          </BrowserRouter>
-          <Toaster
-            position="bottom-center"
-            toastOptions={{
-              duration: 2000,
-            }}
-          />
-        </TokenProvider>
-        </SettingsProvider>
-      </LanguageProvider>
-    </ThemeProvider>
+    <HelmetProvider>
+      <ThemeProvider>
+        <LanguageProvider>
+          <SettingsProvider>
+            <TokenProvider>
+              <GlobalSeo />
+              <BrowserRouter>
+                <Routes>
+                  <Route element={<AppLayout />}>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/formatter" element={<FormatterPage />} />
+                    <Route path="/meter-codes" element={<MeterCodesPage />} />
+                    <Route path="/history" element={<HistoryPage />} />
+                    <Route path="/favorites" element={<FavoritesPage />} />
+                    <Route path="/settings" element={<SettingsPage />} />
+                    <Route path="/about" element={<AboutPage />} />
+                  </Route>
+                </Routes>
+              </BrowserRouter>
+              <Toaster
+                position="bottom-center"
+                toastOptions={{
+                  duration: 2000,
+                }}
+              />
+            </TokenProvider>
+          </SettingsProvider>
+        </LanguageProvider>
+      </ThemeProvider>
+    </HelmetProvider>
   )
 }

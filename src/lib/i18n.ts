@@ -145,7 +145,7 @@ export const translations: Translations = {
 
     'footer.privacy': 'MeterMate \u2014 - Easy • Fast • Reliable',
     'footer.tagline': 'Prepaid Meter Token Formatter',
-    'footer.version': 'v1.0.0',
+    'footer.version': 'v1.0.2',
 
     'meterCodes.title': 'Meter Codes',
     'meterCodes.subtitle': 'USSD and service codes for prepaid electricity meters in Bangladesh.',
@@ -169,7 +169,7 @@ export const translations: Translations = {
 
     'home.title': 'প্রিপেইড মিটারের টোকেন, এখন আরও সহজ',
     'home.subtitle':
-      'আপনার এসএমএস পেস্ট করুন → MeterMate স্বয়ংক্রিয়ভাবে টোকেন বের করে ফরম্যাট করে।',
+      'আপনার এসএমএস পেস্ট করুন → MeterMate স্বয়ংক্রিয়ভাবে টোকেন খুঁজে ফরম্যাট করে দিবে',
     'home.badge': '৬টি প্রোভাইডার \u00b7 সম্পূর্ণ অফলাইন',
     'home.getStarted': 'ফরম্যাটিং শুরু করুন',
     'home.feature.detect': 'স্বয়ংক্রিয়ভাবে প্রোভাইডার শনাক্ত',
@@ -302,7 +302,7 @@ export const translations: Translations = {
 
     'footer.privacy': 'MeterMate - সহজ • দ্রুত • নিরাপদ',
     'footer.tagline': 'প্রিপেইড মিটারের টোকেন ফরম্যাটার',
-    'footer.version': 'v1.0.0',
+    'footer.version': 'v1.0.2',
 
     'meterCodes.title': 'মিটার কোড',
     'meterCodes.subtitle': 'বাংলাদেশের প্রিপেইড মিটারের জন্য USSD এবং সার্ভিস কোড।',

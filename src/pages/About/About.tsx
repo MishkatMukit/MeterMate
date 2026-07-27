@@ -1,11 +1,18 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { useTranslation } from '@/context/language-context'
+import { Seo } from '@/components/common/seo'
 
 export default function AboutPage() {
   const { t } = useTranslation()
 
   return (
     <div className="space-y-6">
+      <Seo
+        title="About"
+        description="MeterMate is a free, client-side prepaid meter token formatter for Bangladesh. Automatically detects BPDB, BREB, DESCO, DPDC, NESCO, and WZPDCL. Extracts and formats 20-digit tokens from SMS. 100% private — no data leaves your browser."
+        keywords="about MeterMate, prepaid meter Bangladesh, electricity token app, BPDB BREB DESCO DPDC NESCO WZPDCL, meter token formatter"
+        canonical="/about"
+      />
       <div>
         <h1 className="text-2xl font-bold">{t('about.title')}</h1>
         <p className="text-sm text-muted-foreground mt-1">
