@@ -6,7 +6,7 @@
 
 *Paste your SMS. Get formatted tokens. Recharge your meter.*
 
-![Version](https://img.shields.io/badge/version-1.0.0-green)
+![Version](https://img.shields.io/badge/version-1.1.0-green)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)
 ![TypeScript](https://img.shields.io/badge/TypeScript-6-3178C6?logo=typescript)
@@ -304,7 +304,8 @@ SOFTWARE.
 
 **Mishkat Mahabub**
 
-- Portfolio: (https://mishkatmahabub.vercel.app)
+- Portfolio: [portfolio.mishkatmahabub.tech](https://portfolio.mishkatmahabub.tech/)
+- GitHub: [@MishkatMukit](https://github.com/MishkatMukit)
 
 ---
 

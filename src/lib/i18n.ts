@@ -124,6 +124,13 @@ export const translations: Translations = {
     'about.purpose2':
       'MeterMate automatically detects the provider, extracts the token digits, splits them into valid 20-digit tokens, and formats each into readable 4-digit blocks.',
     'about.providers': 'Supported Providers',
+    'about.developer': 'About the Developer',
+    'about.developerName': 'Mishkat Mahabub',
+    'about.developerBio': 'Frontend & Full-stack Web Developer passionate about building privacy-first, accessible, and fast web utilities for Bangladesh.',
+    'about.githubRepo': 'GitHub Repository',
+    'about.portfolio': 'Portfolio Website',
+    'about.linkedin': 'LinkedIn Profile',
+    'about.facebook': 'Facebook Profile',
     'about.privacy': 'Privacy',
     'about.privacyText':
       'All processing happens entirely in your browser. No SMS content, token digits, or meter information is ever transmitted, stored, or logged. You can verify this by inspecting the network tab in your browser\u2019s developer tools.',
@@ -140,7 +147,7 @@ export const translations: Translations = {
 
     'footer.privacy': 'MeterMate \u2014 - Easy • Fast • Reliable',
     'footer.tagline': 'Prepaid Meter Token Formatter',
-    'footer.version': 'v1.0.2',
+    'footer.version': 'v1.1.0',
 
     'meterCodes.title': 'Meter Codes',
     'meterCodes.subtitle': 'USSD and service codes for prepaid electricity meters in Bangladesh.',
@@ -371,6 +378,13 @@ export const translations: Translations = {
     'about.purpose2':
       'MeterMate স্বয়ংক্রিয়ভাবে প্রোভাইডার শনাক্ত করে, টোকেনগুলো আলাদা করে এবং ৪ সংখ্যার গ্রুপে সাজিয়ে দেখায়, যাতে সহজে মিটারে প্রবেশ করানো যায়।',
     'about.providers': 'সমর্থিত প্রোভাইডার',
+    'about.developer': 'ডেভেলপার পরিচিতি',
+    'about.developerName': 'মিশকাত মাহাবুব',
+    'about.developerBio': 'ফ্রন্টএন্ড ও ফুল-স্ট্যাক ওয়েব ডেভেলপার — ব্যবহারকারী-বান্ধব, দ্রুত এবং নিরাপদ ডিজিটাল সেবা তৈরিতে নিবেদিত।',
+    'about.githubRepo': 'গিটহাব রিপোজিটরি',
+    'about.portfolio': 'পোর্টফোলিও ওয়েবসাইট',
+    'about.linkedin': 'লিংকডইন প্রোফাইল',
+    'about.facebook': 'ফেসবুক প্রোফাইল',
     'about.privacy': 'গোপনীয়তা',
     'about.privacyText':
       'সব কাজ আপনার ব্রাউজারেই হয়। আপনার এসএমএস, টোকেন বা মিটারের কোনো তথ্য কোথাও পাঠানো, সংরক্ষণ বা লগ করা হয় না।',
@@ -387,7 +401,7 @@ export const translations: Translations = {
 
     'footer.privacy': 'MeterMate - সহজ • দ্রুত • নিরাপদ',
     'footer.tagline': 'প্রিপেইড মিটারের টোকেন ফরম্যাটার',
-    'footer.version': 'v1.0.2',
+    'footer.version': 'v1.1.0',
 
     'meterCodes.title': 'মিটার কোড',
     'meterCodes.subtitle': 'বাংলাদেশের প্রিপেইড মিটারের জন্য USSD এবং সার্ভিস কোড।',
