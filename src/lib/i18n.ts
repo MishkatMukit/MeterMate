@@ -16,7 +16,7 @@ export const translations: Translations = {
 
     'home.title': 'Prepaid Meter Tokens, Made Simple',
     'home.subtitle': 'Paste your prepaid meter SMS → MeterMate automatically extracts and formats the tokens.',
-    'home.badge': '6 providers \u00b7 fully offline',
+    'home.badge': 'Local Processing + Offline Support',
     'home.getStarted': 'Start Formatting',
     'home.heroTitleTop': 'Prepaid meter tokens,',
     'home.heroTitleAccent': 'made simple.',
@@ -145,7 +145,7 @@ export const translations: Translations = {
     'favorites.comingSoon': 'Coming soon.',
     'favorites.empty': 'Your saved meters will appear here in a future update.',
 
-    'footer.privacy': 'MeterMate \u2014 - Easy • Fast • Reliable',
+    'footer.privacy': 'MeterMate \u2014 Easy • Fast • Reliable',
     'footer.tagline': 'Prepaid Meter Token Formatter',
     'footer.version': 'v1.1.0',
 
@@ -264,7 +264,7 @@ export const translations: Translations = {
     'home.title': 'প্রিপেইড মিটারের টোকেন, এখন আরও সহজ',
     'home.subtitle':
       'আপনার এসএমএস পেস্ট করুন → MeterMate স্বয়ংক্রিয়ভাবে টোকেন খুঁজে ফরম্যাট করে দিবে',
-    'home.badge': '৬টি প্রোভাইডার \u00b7 সম্পূর্ণ অফলাইন',
+    'home.badge': 'লোকাল প্রসেসিং + অফলাইন সাপোর্ট',
     'home.getStarted': 'ফরম্যাটিং শুরু করুন',
     'home.heroTitleTop': 'প্রিপেইড মিটারের টোকেন,',
     'home.heroTitleAccent': 'এখন আরও সহজ',

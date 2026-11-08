@@ -64,12 +64,12 @@ export default function BillCalculatorPage() {
         timestamp: Date.now(),
         quickReplies: [
           {
-            label: isBn ? '💡 লাইট ও ফ্যান' : '💡 Lights & Fans',
-            value: isBn ? 'আমার ৪টি LED লাইট ও ২টি ফ্যান আছে' : 'I have 4 LED lights and 2 ceiling fans',
+            label: isBn ? '✅ হ্যাঁ, বিল হিসাব করুন' : '✅ Yes, calculate my bill',
+            value: isBn ? 'হ্যাঁ, আমার বিল হিসাব করুন' : 'Yes, calculate my bill',
           },
           {
-            label: isBn ? '❄️ এসি ও ফ্রিজ' : '❄️ AC & Refrigerator',
-            value: isBn ? 'আমার ১টি ফ্রিজ ও ১টি ১.৫ টন এসি আছে' : 'I have 1 refrigerator and 1 1.5-ton AC',
+            label: isBn ? '➕ আরও যোগ করুন' : '➕ Add more',
+            value: isBn ? 'আমি আরও কিছু যন্ত্রপাতি যোগ করতে চাই' : 'Add more',
           },
         ],
       },
@@ -84,7 +84,26 @@ export default function BillCalculatorPage() {
 
     const persisted = loadPersistedChat()
     if (persisted && persisted.messages.length > 0) {
-      setMessages(persisted.messages)
+      const defaultQuickReplies = [
+        {
+          label: isBn ? '✅ হ্যাঁ, বিল হিসাব করুন' : '✅ Yes, calculate my bill',
+          value: isBn ? 'হ্যাঁ, আমার বিল হিসাব করুন' : 'Yes, calculate my bill',
+        },
+        {
+          label: isBn ? '➕ আরও যোগ করুন' : '➕ Add more',
+          value: isBn ? 'আমি আরও কিছু যন্ত্রপাতি যোগ করতে চাই' : 'Add more',
+        },
+      ]
+      const updatedMessages = persisted.messages.map((m, idx) => {
+        if (idx === 0 && m.role === 'bot') {
+          return {
+            ...m,
+            quickReplies: defaultQuickReplies,
+          }
+        }
+        return m
+      })
+      setMessages(updatedMessages)
       setGroqHistory(persisted.groqHistory)
       setBillResult(persisted.billResult)
     } else {
@@ -93,7 +112,7 @@ export default function BillCalculatorPage() {
       setGroqHistory(initialGroq)
     }
     setIsInitialized(true)
-  }, [isInitialized, buildInitialMessages])
+  }, [isInitialized, buildInitialMessages, isBn])
 
   // Auto-save chat session to localStorage whenever state changes
   useEffect(() => {
@@ -254,12 +273,12 @@ export default function BillCalculatorPage() {
             quickReplies: isAskingConfirmation
               ? [
                   {
-                    label: isBn ? '✅ হ্যাঁ, হিসাব করুন' : '✅ Yes, calculate bill',
-                    value: isBn ? 'হ্যাঁ, চূড়ান্ত বিল হিসাব করুন' : 'Yes, finalize and calculate my bill',
+                    label: isBn ? '✅ হ্যাঁ, বিল হিসাব করুন' : '✅ Yes, calculate my bill',
+                    value: isBn ? 'হ্যাঁ, আমার বিল হিসাব করুন' : 'Yes, calculate my bill',
                   },
                   {
-                    label: isBn ? '➕ আরও যন্ত্র যোগ করব' : '➕ Add more appliances',
-                    value: isBn ? 'আমি আরও কিছু যন্ত্রপাতি যোগ করতে চাই' : 'I want to add more appliances first',
+                    label: isBn ? '➕ আরও যোগ করুন' : '➕ Add more',
+                    value: isBn ? 'আমি আরও কিছু যন্ত্রপাতি যোগ করতে চাই' : 'Add more',
                   },
                 ]
               : undefined,
@@ -325,9 +344,8 @@ export default function BillCalculatorPage() {
   }
 
   const suggestions = [
-    t('bill.suggestion1'),
-    t('bill.suggestion2'),
     t('bill.suggestionConfirm'),
+    isBn ? 'আরও যোগ করুন' : 'Add more',
   ]
 
   return (

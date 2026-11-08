@@ -88,8 +88,9 @@ export default function HomePage() {
       {/* ---------------------------------------------------------------- Hero */}
       <section className="relative pb-8 pt-6 md:pb-14 md:pt-12">
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-          <div className="absolute -top-40 left-1/2 h-[680px] w-[150%] -translate-x-1/2 bg-[radial-gradient(ellipse_at_50%_0%,var(--color-primary-surface)_0%,#F0FDF400_58%)] dark:bg-[radial-gradient(ellipse_at_50%_0%,#052E16_0%,#052E1600_58%)]" />
-          <div className="absolute inset-x-0 top-0 h-[460px] bg-[radial-gradient(circle_at_1px_1px,var(--color-border)_1px,transparent_0)] bg-[size:26px_26px] opacity-70 [mask-image:radial-gradient(ellipse_65%_70%_at_50%_0%,#000_45%,transparent_100%)]" />
+          <div className="absolute -bottom-40 left-1/2 h-[680px] w-[150%] -translate-x-1/2 bg-[radial-gradient(ellipse_at_50%_100%,var(--color-primary-surface)_0%,#F0FDF400_65%)] dark:bg-[radial-gradient(ellipse_at_50%_100%,#052E16_0%,#052E1600_65%)]" />
+          <div className="absolute inset-x-0 bottom-0 h-[460px] bg-[radial-gradient(circle_at_1px_1px,var(--color-border)_1px,transparent_0)] bg-[size:26px_26px] opacity-70 [mask-image:radial-gradient(ellipse_65%_70%_at_50%_100%,#000_45%,transparent_100%)]" />
+          <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
         </div>
 
         <div className="grid items-center gap-10 lg:grid-cols-[1.02fr_0.98fr] lg:gap-14">

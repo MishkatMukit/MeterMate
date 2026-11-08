@@ -8,11 +8,15 @@ export const GROQ_MODELS = [
 export const GROQ_MODEL = GROQ_MODELS[0]
 
 export function getGroqApiKey(): string {
+  const localKey = localStorage.getItem(GROQ_STORAGE_KEY)?.trim()
+  if (localKey) {
+    return localKey
+  }
   const envKey = import.meta.env.VITE_GROQ_API_KEY
   if (envKey && typeof envKey === 'string' && envKey.trim().length > 0) {
     return envKey.trim()
   }
-  return localStorage.getItem(GROQ_STORAGE_KEY)?.trim() || ''
+  return ''
 }
 
 export function setGroqApiKey(key: string): void {
