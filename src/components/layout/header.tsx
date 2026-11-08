@@ -35,7 +35,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="mx-auto flex h-12 max-w-3xl items-center justify-between px-4 md:px-4">
+      <div className="mx-auto flex h-12 max-w-6xl items-center justify-between px-4 md:px-6">
         <Link to="/" className="flex items-center gap-2.5 font-semibold shrink-0">
           <Zap className="h-6 w-6 text-primary" />
           <span className="font-brand text-[15px]">MeterMate</span>
@@ -102,7 +102,7 @@ export function Header() {
               className="fixed top-12 left-0 right-0 z-50 border-b bg-background shadow-lg md:hidden"
               onClick={(e) => e.stopPropagation()}
             >
-              <nav className="mx-auto max-w-3xl px-4 py-4">
+              <nav className="mx-auto max-w-6xl px-4 py-4 md:px-6">
                 {navLinks.map(({ to, key }) => {
                   const isActive = location.pathname === to
                   return (
