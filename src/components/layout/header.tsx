@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react'
 
 const navLinks = [
   { to: '/formatter', key: 'nav.formatter' },
+  { to: '/bill-calculator', key: 'nav.billCalculator' },
   { to: '/meter-codes', key: 'nav.meterCodes' },
   { to: '/history', key: 'nav.history' },
   { to: '/settings', key: 'nav.settings' },

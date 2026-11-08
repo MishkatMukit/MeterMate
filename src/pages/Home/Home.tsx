@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import {
   ArrowRight,
+  Calculator,
   CheckCircle2,
   Clock3,
   KeyRound,
@@ -33,6 +34,7 @@ const features = [
 ] as const
 
 const moreFeatures = [
+  { icon: Calculator, to: '/bill-calculator', titleKey: 'home.billCalculator', descKey: 'home.billCalculatorDesc' },
   { icon: KeyRound, to: '/meter-codes', titleKey: 'home.meterCodes', descKey: 'home.meterCodesDesc' },
   { icon: Clock3, to: '/history', titleKey: 'home.tokenHistory', descKey: 'home.tokenHistoryDesc' },
   { icon: Languages, to: '/settings', titleKey: 'home.languageSupport', descKey: 'home.languageSupportDesc' },
@@ -234,7 +236,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="mt-4 grid gap-3 md:mt-5 md:grid-cols-3">
+          <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4 md:mt-5">
             {moreFeatures.map(({ icon: Icon, to, titleKey, descKey }) => (
               <Link
                 key={titleKey}

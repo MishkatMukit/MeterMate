@@ -13,6 +13,7 @@ import MeterCodesPage from '@/pages/MeterCodes/MeterCodes'
 import FavoritesPage from '@/pages/Favorites/Favorites'
 import SettingsPage from '@/pages/Settings/Settings'
 import AboutPage from '@/pages/About/About'
+import BillCalculatorPage from '@/pages/BillCalculator/BillCalculator'
 import { GlobalSeo } from '@/components/common/global-seo'
 
 export default function App() {
@@ -33,6 +34,7 @@ export default function App() {
                     <Route path="/favorites" element={<FavoritesPage />} />
                     <Route path="/settings" element={<SettingsPage />} />
                     <Route path="/about" element={<AboutPage />} />
+                    <Route path="/bill-calculator" element={<BillCalculatorPage />} />
                   </Route>
                 </Routes>
               </BrowserRouter>

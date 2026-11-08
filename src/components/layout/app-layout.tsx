@@ -6,6 +6,7 @@ export function AppLayout() {
   const { t } = useTranslation()
   const { pathname } = useLocation()
   const isHome = pathname === '/'
+  const isBillCalculator = pathname === '/bill-calculator'
 
   return (
     <div className="relative flex min-h-screen flex-col">
@@ -21,7 +22,9 @@ export function AppLayout() {
           className={
             isHome
               ? 'mx-auto w-full max-w-6xl px-4 py-8 md:px-6'
-              : 'mx-auto max-w-3xl px-4 py-8'
+              : isBillCalculator
+                ? 'mx-auto max-w-3xl px-2 py-3 sm:px-4 sm:py-6'
+                : 'mx-auto max-w-3xl px-4 py-8'
           }
         >
           <Outlet />
